@@ -12,7 +12,7 @@ class Readsms {
   /// The stream containing sms as String
   Stream get smsStream => _controller.stream;
 
-  late final StreamSubscription _channelStreamSubscription;
+  StreamSubscription _channelStreamSubscription;
 
   /// Listens to the broadcast stream exposed by the event
   /// channel and adds data on the [smsStream] whenever

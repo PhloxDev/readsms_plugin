@@ -7,10 +7,10 @@ import 'package:readsms/readsms.dart';
 void main() {
   // const channel = MethodChannel("readsms");
   TestWidgetsFlutterBinding.ensureInitialized();
-  late final Readsms plugin;
+  Readsms plugin;
   setUpAll(() {
     plugin = Readsms()..read();
-    TestDefaultBinaryMessengerBinding.instance!.defaultBinaryMessenger
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .handlePlatformMessage(
       "readsms",
       const StandardMethodCodec().encodeSuccessEnvelope('Flutter'),
