@@ -68,7 +68,7 @@ class ReadsmsPlugin: FlutterPlugin, EventChannel.StreamHandler,BroadcastReceiver
   }
 
   override fun onReattachedToActivityForConfigChanges(p0: ActivityPluginBinding) {
-    //TODO: implement later
+    activity = p0.activity
   }
 
   override fun onDetachedFromActivity() {

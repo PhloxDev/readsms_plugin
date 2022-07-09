@@ -18,6 +18,7 @@ class Readsms {
   /// channel and adds data on the [smsStream] whenever
   /// sms is received
   read() {
+    print('read sms');
     _channelStreamSubscription = _channel.receiveBroadcastStream().listen((e) {
       if (!_controller.isClosed) _controller.sink.add(e);
     });
